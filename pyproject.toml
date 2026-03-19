@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-from-scratch-notebooks"
+version = "0.1.0"
+description = "Notebook-first RAG practice repo with a minimal modern dependency layout."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "jupyter>=1.0",
+  "ipykernel>=6.0",
+  "langchain",
+  "langchain-core",
+  "langchain-community",
+  "langchain-openai",
+  "langchain-text-splitters",
+  "langchain-chroma",
+  "chromadb",
+  "tiktoken",
+  "beautifulsoup4",
+  "requests",
+  "numpy",
+]
+
+[project.optional-dependencies]
+youtube = [
+  "youtube-transcript-api",
+  "pytube",
+]
+rerank = [
+  "rank-bm25",
+  "sentence-transformers",
+  "FlagEmbedding",
+]
+cohere = [
+  "cohere",
+  "langchain-cohere",
+]
+colbert = [
+  "ragatouille",
+]
+all = [
+  "youtube-transcript-api",
+  "pytube",
+  "rank-bm25",
+  "sentence-transformers",
+  "FlagEmbedding",
+  "cohere",
+  "langchain-cohere",
+  "ragatouille",
+]
+
+[tool.setuptools]
+py-modules = []
